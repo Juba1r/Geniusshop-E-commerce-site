@@ -1,0 +1,54 @@
+.customerNavbar-main-div {
+  background-color: #ff4c3b;
+}
+
+/* Top Navbar */
+.top-navbar {
+  padding: 10px 0;
+  background-color: #ff4c3b;
+}
+.customerNavbar-vendor-login-btn,
+.customerNavbar-vendor-rider-btn {
+  padding: 4px 5px;
+  color: white;
+}
+.customerNavbar-vendor-login-btn:hover,
+.customerNavbar-vendor-rider-btn:hover {
+  color: black;
+  background-color: white;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+.top-navbar .nav-link {
+  color: #fff;
+  margin-left: 15px;
+}
+
+/* Bottom Navbar */
+.bottom-navbar {
+  background-color: white;
+  padding: 20px 0;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.bottom-navbar .navbar-brand {
+  font-family: "Arial Black", sans-serif;
+  color: #000;
+  font-size: 24px;
+}
+
+.bottom-navbar .navbar-nav .nav-link {
+  margin-left: 15px;
+  color: #000;
+}
+
+.navbar-icons {
+  display: flex;
+  gap: 20px;
+  font-size: 1.2rem;
+}
+
+.navbar-icons svg {
+  color: #000;
+}
