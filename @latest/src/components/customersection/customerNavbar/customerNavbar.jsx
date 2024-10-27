@@ -9,25 +9,21 @@ const CustomerNavbar = () => {
       <div className="container top-navbar text-white text-nowrap">
         <Row className="align-items-center">
           <Col md={6}>
-            <div>Contact & Support: 00 000 000 000</div>
+            <div className="customNavbar-contact">
+              Contact & Support: 00 000 000 000
+            </div>
           </Col>
           <Col md={6} className="text-md-right">
             <div className="d-flex justify-content-end gap-4 align-items-center">
-              <div
-                href="#"
-                className="customerNavbar-vendor-login-btn border border-1"
-              >
+              <div className="customerNavbar-vendor-login-btn border border-1">
                 Vendor Login
               </div>
-              <div
-                href="#"
-                className="customerNavbar-vendor-rider-btn border border-1"
-              >
+              <div className="customerNavbar-vendor-rider-btn border border-1">
                 Rider Login
               </div>
               <Dropdown>
                 <div className="d-flex align-items-center">
-                  <i className="bi bi-globe2 border-start px-3"></i>
+                  <i className="bi bi-globe2 customNavbar-icon-border border-start px-3"></i>
                   <Dropdown.Toggle
                     id="dropdown-language"
                     className="text-white bg-transparent border-0 p-0"
@@ -72,34 +68,51 @@ const CustomerNavbar = () => {
           <Navbar.Brand href="#" className="logo">
             Genius Shop
           </Navbar.Brand>
-          <Navbar.Toggle aria-controls="basic-navbar-nav" />
+          <Navbar.Toggle
+            aria-controls="basic-navbar-nav"
+            className="navbar-toggler-left p-0"
+          />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="mx-auto gap-3">
-              <Nav.Link href="#">HOME</Nav.Link>
-              <Nav.Link href="#">PRODUCTS</Nav.Link>
-              <Nav.Link href="#">PAGES</Nav.Link>
-              <Nav.Link href="#">BLOG</Nav.Link>
-              <Nav.Link href="#">FAQ</Nav.Link>
-              <Nav.Link href="#">CONTACT US</Nav.Link>
+              <Nav.Link href="#" className="customNavbar-links">
+                HOME
+              </Nav.Link>
+              <Nav.Link href="#" className="customNavbar-links">
+                PRODUCTS
+              </Nav.Link>
+              <Nav.Link href="#" className="customNavbar-links">
+                PAGES
+              </Nav.Link>
+              <Nav.Link href="#" className="customNavbar-links">
+                BLOG
+              </Nav.Link>
+              <Nav.Link href="#" className="customNavbar-links">
+                FAQ
+              </Nav.Link>
+              <Nav.Link href="#" className="customNavbar-links">
+                CONTACT US
+              </Nav.Link>
             </Nav>
-            <div className="navbar-icons d-flex gap-4">
-              <div className="icon-with-badge">
-                <i className="bi bi-search customNavbar-icons-circle"></i>
-              </div>
-              <div className="icon-with-badge position-relative">
-                <i className="bi bi-infinity customNavbar-icons-circle"></i>
-                <span className="badge">0</span>
-              </div>
-              <div className="icon-with-badge position-relative">
-                <i className="bi bi-heart customNavbar-icons-circle"></i>
-                <span className="badge">0</span>
-              </div>
-              <div className="icon-with-badge position-relative">
-                <i className="bi bi-cart2 customNavbar-icons-circle"></i>
-                <span className="badge">0</span>
-              </div>
-            </div>
           </Navbar.Collapse>
+
+          {/* Icons are kept outside Navbar.Collapse for always visibility */}
+          <div className="navbar-icons d-flex gap-4">
+            <div className="icon-with-badge">
+              <i className="bi bi-search customNavbar-icons-circle"></i>
+            </div>
+            <div className="icon-with-badge position-relative">
+              <i className="bi bi-infinity customNavbar-icons-circle"></i>
+              <span className="badge">0</span>
+            </div>
+            <div className="icon-with-badge position-relative">
+              <i className="bi bi-heart customNavbar-icons-circle"></i>
+              <span className="badge">0</span>
+            </div>
+            <div className="icon-with-badge position-relative">
+              <i className="bi bi-cart2 customNavbar-icons-circle"></i>
+              <span className="badge">0</span>
+            </div>
+          </div>
         </Container>
       </Navbar>
     </div>

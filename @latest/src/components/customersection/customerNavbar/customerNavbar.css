@@ -78,3 +78,74 @@
   align-items: center;
   position: relative;
 }
+
+.customNavbar-links:hover {
+  color: #ff4c3b !important;
+  border-bottom: solid #ff4c3b 3px;
+}
+
+@media (max-width: 576px) {
+  /* Top Navbar */
+
+  /* Hide other elements in the top navbar except for the dropdowns */
+  .top-navbar > .container > .row > .col-md-6:first-child,
+  .customerNavbar-vendor-login-btn,
+  .customerNavbar-vendor-rider-btn,
+  .customNavbar-contact,
+  .top-navbar .nav-link {
+    display: none;
+  }
+
+  /* Adjust dropdowns to align them in the center */
+  .customNavbar-icon-border {
+    border-left: none;
+  }
+
+  .top-navbar {
+    justify-content: center;
+    display: flex;
+  }
+
+  /* Bottom Navbar */
+  .navbar-toggler-left {
+    position: absolute;
+    left: 0;
+    border: none;
+    margin-left: 5px;
+  }
+
+  /* Shift the logo slightly to the right */
+  .bottom-navbar .logo {
+    margin-left: 30px; /* Adjust as needed to match the hamburger icon size */
+  }
+  .icon-with-badge {
+    position: relative;
+    font-size: 1.1rem;
+  }
+  .customNavbar-icons-circle {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #dee2e67d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+  .bottom-navbar .navbar-nav {
+    display: none;
+  }
+
+  /* Keep the icons visible on the right */
+  .navbar-icons {
+    margin-left: auto; /* Push icons to the far right */
+    display: flex;
+    gap: 10px !important;
+    top: 25px;
+    right: 10px;
+    position: absolute;
+  }
+  .logo {
+    font-size: 20px !important;
+  }
+}
