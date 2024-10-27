@@ -49,17 +49,18 @@
   font-weight: 500;
 }
 
-/* category card desing css */
+/* category card design css */
 
 .home-category-card {
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100%;
 }
 
 .home-category-image-wrapper {
-  width: 100px;
-  height: 100px;
+  width: 200px;
+  height: 200px;
   border: 2px solid #000;
   border-radius: 50%;
   overflow: hidden;
@@ -75,13 +76,13 @@
 }
 
 .home-category-h6 {
-  font-weight: bold;
+  font-weight: 700;
   color: #4b2e83;
-  font-size: 0.9rem;
+  font-size: 1.2rem;
 }
 
 .home-category-count {
-  font-weight: normal;
-  color: #888;
-  font-size: 0.8rem;
+  font-weight: 700;
+  color: #000;
+  font-size: 1.1rem;
 }

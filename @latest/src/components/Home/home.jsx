@@ -12,21 +12,24 @@ import sliderimg1 from "../../assets/sliderimg1.jpg";
 import sliderimg2 from "../../assets/sliderimg2.jpg";
 import sliderimg3 from "../../assets/sliderimg3.jpg";
 
-import { Container, Row, Col } from "react-bootstrap";
-import Ctgimg1 from "../../assets/homecategoryimg1.jpg";
-import Ctgimg2 from "../../assets/homecategoryimg2.jpg";
-import Ctgimg3 from "../../assets/homecategoryimg3.jpg";
-import Ctgimg4 from "../../assets/homecategoryimg4.jpg";
-import Ctgimg5 from "../../assets/homecategoryimg5.jpg";
-import Ctgimg6 from "../../assets/homecategoryimg6.jpg";
+import { Container, Col } from "react-bootstrap";
+import ctgimg1 from "../../assets/homecategoryimg1.jpg";
+import ctgimg2 from "../../assets/homecategoryimg2.jpg";
+import ctgimg3 from "../../assets/homecategoryimg3.jpg";
+import ctgimg4 from "../../assets/homecategoryimg4.jpg";
+import ctgimg5 from "../../assets/homecategoryimg5.jpg";
+import ctgimg6 from "../../assets/homecategoryimg6.jpg";
+import bstofrimg1 from "../../assets/bestofferimg1.jpg";
+import bstofrimg2 from "../../assets/bestofferimg2.jfif";
+import bstofrimg3 from "../../assets/bestofferimg3.jfif";
 
 const categories = [
-  { name: "Smart Phone & Tablet", count: 4, image: Ctgimg1 },
-  { name: "Sport & Outdoor", count: 2, image: Ctgimg2 },
-  { name: "Jewelry & Watches", count: 3, image: Ctgimg3 },
-  { name: "Health & Beauty", count: 3, image: Ctgimg4 },
-  { name: "Books & Office", count: 1, image: Ctgimg5 },
-  { name: "Toys & Hobbies", count: 2, image: Ctgimg6 },
+  { name: "Smart Phone & Tablet", count: 4, image: ctgimg1 },
+  { name: "Sport & Outdoor", count: 2, image: ctgimg2 },
+  { name: "Jewelry & Watches", count: 3, image: ctgimg3 },
+  { name: "Health & Beauty", count: 3, image: ctgimg4 },
+  { name: "Books & Office", count: 1, image: ctgimg5 },
+  { name: "Toys & Hobbies", count: 2, image: ctgimg6 },
 ];
 
 const Home = () => {
@@ -88,8 +91,8 @@ const Home = () => {
         </div>
       </div>
       <div>
-        <Container className="py-5 mt-5">
-          <Row className="justify-content-center">
+        <Container className="py-5 px-0 mt-5 mb-5">
+          <div className="justify-content-center d-flex align-items-center gap-5">
             {categories.map((category, index) => (
               <Col
                 key={index}
@@ -97,7 +100,7 @@ const Home = () => {
                 sm={4}
                 md={3}
                 lg={2}
-                className="text-center mb-4"
+                className="text-center mb-4 "
               >
                 <div className="home-category-card">
                   <div className="home-category-image-wrapper">
@@ -112,8 +115,35 @@ const Home = () => {
                 </div>
               </Col>
             ))}
-          </Row>
+          </div>
         </Container>
+      </div>
+      <div className="container">
+        <div
+          className="d-flex flex-column justify-content-center align-items-center text-center
+        "
+        >
+          <h2 className="fw-bold fs-1">Best Month offer</h2>
+          <p className="mt-3">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. In,
+            provident voluptas. Delectus neque quisquam tempore recusandae
+            nesciunt sint pariatur hic. Lorem ipsum dolor sit amet consectetur
+            adipisicing elit. Hic, ipsa! provident voluptas.
+          </p>
+        </div>
+        <div className="mt-5 col-12 d-flex">
+          <div className="col-6 ">
+            <img src={bstofrimg1} alt="" width={650} height={600} />
+          </div>
+          <div className="col-6 flex-column d-flex ms-3">
+            <div>
+              <img src={bstofrimg2} alt="" width={600} height={295} />
+            </div>
+            <div className="mt-3">
+              <img src={bstofrimg3} alt="" width={600} height={295} />
+            </div>
+          </div>
+        </div>
       </div>
     </>
   );
