@@ -1,0 +1,111 @@
+.footer {
+  background-color: #2b0d0d;
+  color: #fff;
+  font-family: Arial, sans-serif;
+}
+
+.footer-newsletter-section {
+  background-color: #ff4c3b;
+  text-align: center;
+}
+
+.footer-newsletter-title {
+  font-weight: bold;
+  color: #fff;
+  font-size: 2.5rem;
+}
+
+.footer-newsletter-form .footer-newsletter-input {
+  width: 250px;
+  border-radius: 0;
+  border: none;
+}
+
+.footer-newsletter-button {
+  border-radius: 0;
+  background-color: #000;
+  color: #fff;
+  border: none;
+}
+
+.footer-main h5 {
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.footer-contact li,
+.footer-links li {
+  list-style: none;
+  margin-bottom: 10px;
+}
+
+.footer-contact li svg {
+  margin-right: 10px;
+}
+
+.footer-social-icons svg {
+  font-size: 2.7rem;
+  color: #000;
+  margin-right: 10px;
+  cursor: pointer;
+  background-color: white;
+  border-radius: 50%;
+  padding: 8px;
+}
+
+.footer-post {
+  margin-bottom: 15px;
+}
+
+.footer-post p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #fff;
+}
+
+.footer-post small {
+  color: #888;
+  font-size: 0.8rem;
+}
+.footer-post i {
+  color: #888;
+  font-size: 0.8rem;
+}
+
+.footer-bottom {
+  background-color: #1c1c1c;
+  color: #ccc;
+}
+
+.footer-bottom p {
+  margin: 0;
+  font-size: 0.85rem;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .footer-newsletter-title {
+    font-size: 1.2rem;
+  }
+
+  .footer-newsletter-form .footer-newsletter-input {
+    width: 200px;
+  }
+
+  .footer-social-icons svg {
+    font-size: 1.3rem;
+    padding: 6px;
+  }
+
+  .footer-main h5 {
+    font-size: 1rem;
+  }
+
+  .footer-post p {
+    font-size: 0.8rem;
+  }
+
+  .footer-post small {
+    font-size: 0.7rem;
+  }
+}

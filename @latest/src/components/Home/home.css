@@ -1,3 +1,4 @@
+/* Base Styles */
 .swiper {
   width: 100%;
   height: 50%;
@@ -7,8 +8,6 @@
   text-align: center;
   font-size: 18px;
   background: #fff;
-
-  /* Center slide text vertically */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -35,6 +34,7 @@
   left: 10%;
   white-space: nowrap;
 }
+
 .home-slider-shopnow-btn {
   background-color: #ff4c3b;
   color: #fff;
@@ -42,6 +42,7 @@
   padding: 10px 30px;
   transition: 0.3s ease-in-out;
 }
+
 .home-slider-shopnow-btn:hover {
   background-color: white;
   color: #ff4c3b;
@@ -49,8 +50,7 @@
   font-weight: 500;
 }
 
-/* category card design css */
-
+/* Category Card Design */
 .home-category-card {
   display: flex;
   flex-direction: column;
@@ -85,4 +85,110 @@
   font-weight: 700;
   color: #000;
   font-size: 1.1rem;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  /* Adjust slider text position for smaller screens */
+  .home-slider-text-inner {
+    top: 20%;
+    left: 5%;
+    white-space: normal;
+  }
+
+  .home-slider-shopnow-btn {
+    padding: 8px 20px;
+    font-size: 0.9rem;
+  }
+
+  /* Category card image size adjustment */
+  .home-category-image-wrapper {
+    width: 150px;
+    height: 150px;
+  }
+
+  .home-category-div {
+    display: grid !important;
+    grid-template-columns: auto auto;
+    
+  }
+
+  .home-category-h6 {
+    font-size: 1rem;
+  }
+
+  .home-category-count {
+    font-size: 0.9rem;
+  }
+
+  /* Best Month Offer section stacking */
+  .container .d-flex.mt-5 {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .container .d-flex.mt-5 .col-6 {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+}
+
+@media (max-width: 576px) {
+  /* Further adjust slider text position for mobile */
+  .home-slider-text-inner {
+    top: 11%;
+    left: 7%;
+    white-space: normal;
+    width: 100%;
+  }
+  .home-slider-text-inner h1 {
+    font-size: 20px !important;
+  }
+  .home-slider-text-inner p {
+    font-size: 8px !important;
+    width: 65%;
+    margin-top: 0px !important;
+    margin-bottom: 8px;
+  }
+
+  .home-slider-shopnow-btn {
+    padding: 4px 10px;
+    border-radius: 10% !important;
+    font-size: 0.6rem;
+    margin-top: 0px !important;
+  }
+
+  /* Smaller category card image for mobile */
+  .home-category-image-wrapper {
+    width: 120px;
+    height: 120px;
+  }
+
+  .home-category-h6 {
+    font-size: 0.9rem;
+  }
+
+  .home-category-count {
+    font-size: 0.8rem;
+  }
+  /* Best offer image */
+
+  .best-offer-image-div img {
+    width: 100%;
+    height: auto;
+  }
+  .best-offer-image-div div {
+    margin-left: 0 !important;
+  }
+
+  /* Adjust Best Month Offer section stacking */
+  .container .d-flex.mt-5 {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .container .d-flex.mt-5 .col-6 {
+    width: 100%;
+    margin-bottom: 15px;
+  }
 }

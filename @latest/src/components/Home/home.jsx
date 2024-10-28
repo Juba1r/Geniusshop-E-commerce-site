@@ -23,6 +23,9 @@ import bstofrimg1 from "../../assets/bestofferimg1.jpg";
 import bstofrimg2 from "../../assets/bestofferimg2.jfif";
 import bstofrimg3 from "../../assets/bestofferimg3.jfif";
 
+import HomeProducts from "./homeProducts/homeProducts";
+import Footer from "../customersection/footer/footer";
+
 const categories = [
   { name: "Smart Phone & Tablet", count: 4, image: ctgimg1 },
   { name: "Sport & Outdoor", count: 2, image: ctgimg2 },
@@ -35,7 +38,7 @@ const categories = [
 const Home = () => {
   return (
     <>
-      <div className="px-0 mt-5">
+      <div className="px-0">
         <div className="home-swiper">
           <Swiper
             pagination={{
@@ -92,11 +95,11 @@ const Home = () => {
       </div>
       <div>
         <Container className="py-5 px-0 mt-5 mb-5">
-          <div className="justify-content-center d-flex align-items-center gap-5">
+          <div className="home-category-div justify-content-center d-flex align-items-center gap-4">
             {categories.map((category, index) => (
               <Col
                 key={index}
-                xs={6}
+                xs={12}
                 sm={4}
                 md={3}
                 lg={2}
@@ -131,9 +134,9 @@ const Home = () => {
             adipisicing elit. Hic, ipsa! provident voluptas.
           </p>
         </div>
-        <div className="mt-5 col-12 d-flex">
+        <div className="mt-5 col-12 d-flex best-offer-image-div">
           <div className="col-6 ">
-            <img src={bstofrimg1} alt="" width={650} height={600} />
+            <img src={bstofrimg1} alt="" width={650} height={606} />
           </div>
           <div className="col-6 flex-column d-flex ms-3">
             <div>
@@ -145,6 +148,8 @@ const Home = () => {
           </div>
         </div>
       </div>
+      <HomeProducts />
+      <Footer />
     </>
   );
 };
