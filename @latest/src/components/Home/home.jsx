@@ -138,7 +138,7 @@ const Home = () => {
           <div className="col-6 ">
             <img src={bstofrimg1} alt="" width={670} height={606} />
           </div>
-          <div className="col-6 flex-column d-flex ms-3">
+          <div className="col-6 flex-column d-flex">
             <div>
               <img src={bstofrimg2} alt="" width={600} height={295} />
             </div>
