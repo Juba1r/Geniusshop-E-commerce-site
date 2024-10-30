@@ -8,11 +8,12 @@ import "swiper/css/pagination";
 
 // import required modules
 import { Pagination } from "swiper/modules";
+import { EffectCards } from "swiper/modules";
 import sliderimg1 from "../../assets/sliderimg1.jpg";
 import sliderimg2 from "../../assets/sliderimg2.jpg";
 import sliderimg3 from "../../assets/sliderimg3.jpg";
 
-import { Container, Col } from "react-bootstrap";
+import { Container, Col, Button, Card, Row } from "react-bootstrap";
 import ctgimg1 from "../../assets/homecategoryimg1.jpg";
 import ctgimg2 from "../../assets/homecategoryimg2.jpg";
 import ctgimg3 from "../../assets/homecategoryimg3.jpg";
@@ -23,8 +24,26 @@ import bstofrimg1 from "../../assets/bestofferimg1.jpg";
 import bstofrimg2 from "../../assets/bestofferimg2.jfif";
 import bstofrimg3 from "../../assets/bestofferimg3.jfif";
 
+import bstdealsliderimg1 from "../../assets/bestdealsliderimg1.jpg";
+import bstdealsliderimg2 from "../../assets/bestdealsliderimg2.jpg";
+import bstdealsliderimg3 from "../../assets/bestdealsliderimg3.jpg";
+import bstdealsliderimg4 from "../../assets/bestdealsliderimg4.jpg";
+
+import partnerlogo1 from "../../assets/partnerlogo1.jpg";
+import partnerlogo2 from "../../assets/partnerlogo2.jpg";
+import partnerlogo3 from "../../assets/partnerlogo3.jpg";
+import partnerlogo4 from "../../assets/partnerlogo4.jpg";
+import partnerlogo5 from "../../assets/partnerlogo5.jpg";
+import partnerlogo6 from "../../assets/partnerlogo6.jpg";
+
+import prdctpic1 from "../../assets/productcardpicture1.jpg";
+import prdctpic2 from "../../assets/productcardpicture2.jpg";
+import prdctpic3 from "../../assets/productcardpicture3.jpg";
+import prdctpic4 from "../../assets/productcardpicture4.jpg";
+
 import HomeProducts from "./homeProducts/homeProducts";
 import Footer from "../customersection/footer/footer";
+import { FaEye, FaStar } from "react-icons/fa";
 
 const categories = [
   { name: "Smart Phone & Tablet", count: 4, image: ctgimg1 },
@@ -33,6 +52,44 @@ const categories = [
   { name: "Health & Beauty", count: 3, image: ctgimg4 },
   { name: "Books & Office", count: 1, image: ctgimg5 },
   { name: "Toys & Hobbies", count: 2, image: ctgimg6 },
+];
+const bestSellingProducts = [
+  {
+    id: 1,
+    image: prdctpic1,
+    discount: "-25%",
+    title: "Chic Off-Shoulder Ruffle Dress with Floral Print",
+    price: "318.95$",
+    oldPrice: "423.95$",
+    rating: 0,
+  },
+  {
+    id: 2,
+    image: prdctpic2,
+    discount: "-34%",
+    title: "Cozy Knit Sweater with Turtleneck and Cable Knit Pattern",
+    price: "267.50$",
+    oldPrice: "404$",
+    rating: 0,
+  },
+  {
+    id: 3,
+    image: prdctpic3,
+    discount: "-38%",
+    title: "High-Waisted Skinny Jeans with Distressed Details",
+    price: "146.75$",
+    oldPrice: "236$",
+    rating: 0,
+  },
+  {
+    id: 4,
+    image: prdctpic4,
+    discount: "-42%",
+    title: "Gaming Headset with Surround Sound, LED Lighting",
+    price: "215$",
+    oldPrice: "372.50$",
+    rating: 0,
+  },
 ];
 
 const Home = () => {
@@ -149,6 +206,289 @@ const Home = () => {
         </div>
       </div>
       <HomeProducts />
+      <div className="deal-of-the-day-div container mt-5 col-12 d-flex">
+        <div className="col-6 deal-of-the-day-text">
+          <h1 className="fw-bold">
+            DEAL <br />
+            OF THE DAY
+          </h1>
+          <p className="fw-semibold">CLICK SHOP NOW FOR ALL OF THE PRODUCT</p>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab eius
+            omnis iste deleniti unde corrupti molestias quis ipsum autem
+            repudiandae!Lorem Lorem ipsum dolor sit amet consectetur
+          </p>
+          <div className="d-flex align-items-center gap-4 deal-of-the-day-dates">
+            <p>
+              {" "}
+              236 <br /> DAY
+            </p>
+            <p>
+              {" "}
+              17 <br /> HOUR
+            </p>
+            <p>
+              {" "}
+              59 <br /> MIN
+            </p>
+            <p>
+              {" "}
+              40 <br /> SEC
+            </p>
+          </div>
+          <button className="deal-of-the-day-shopnow-btn mt-2 rounded-3">
+            Shop Now
+          </button>
+        </div>
+        <div className="col-6 align-items-center d-flex justify-content-center ">
+          <Swiper
+            effect={"cards"}
+            grabCursor={true}
+            modules={[EffectCards]}
+            className="mySwiper h-75 w-50 rounded-5"
+          >
+            <SwiperSlide>
+              <img src={bstdealsliderimg1} alt="" />
+            </SwiperSlide>
+            <SwiperSlide>
+              <img src={bstdealsliderimg2} alt="" />
+            </SwiperSlide>
+            <SwiperSlide>
+              <img src={bstdealsliderimg3} alt="" />
+            </SwiperSlide>
+            <SwiperSlide>
+              <img src={bstdealsliderimg4} alt="" />
+            </SwiperSlide>
+          </Swiper>
+        </div>
+      </div>
+      <div className="our-partner-div container mb-5">
+        <div className="our-partner-title mb-5">
+          <h1>Our Partners</h1>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi
+            praesentium, pariatur minus quas neque suscipit quisquam itaque
+            cupiditate ipsam quod!minus quas neque suscipit quisquam itaque
+            cupiditate ipsam quod!cupiditate ipsam quod!
+          </p>
+        </div>
+        <div className="our-partner-images">
+          <img
+            src={partnerlogo1}
+            width={200}
+            height={100}
+            alt="partner's logo 1"
+          />
+          <img
+            src={partnerlogo2}
+            width={200}
+            height={100}
+            alt="partner's logo 1"
+          />
+          <img
+            src={partnerlogo3}
+            width={200}
+            height={100}
+            alt="partner's logo 1"
+          />
+          <img
+            src={partnerlogo4}
+            width={200}
+            height={100}
+            alt="partner's logo 1"
+          />
+          <img
+            src={partnerlogo5}
+            width={200}
+            height={100}
+            alt="partner's logo 1"
+          />
+          <img
+            src={partnerlogo6}
+            width={200}
+            height={100}
+            alt="partner's logo 1"
+          />
+        </div>
+        <div className="our-partner-images mt-5">
+          <img
+            src={partnerlogo5}
+            width={200}
+            height={100}
+            alt="partner's logo 1"
+          />
+          <img
+            src={partnerlogo3}
+            width={200}
+            height={100}
+            alt="partner's logo 1"
+          />
+          <img
+            src={partnerlogo2}
+            width={200}
+            height={100}
+            alt="partner's logo 1"
+          />
+          <img
+            src={partnerlogo6}
+            width={200}
+            height={100}
+            alt="partner's logo 1"
+          />
+          <img
+            src={partnerlogo1}
+            width={200}
+            height={100}
+            alt="partner's logo 1"
+          />
+          <img
+            src={partnerlogo4}
+            width={200}
+            height={100}
+            alt="partner's logo 1"
+          />
+        </div>
+      </div>
+      <div className="best-selling-product-container container">
+        <Container className="py-5">
+          <h1 className="text-center fw-bold mb-4 mt-5">
+            Best Selling Products
+          </h1>
+          <div className="featured-products-swiper mt-5">
+            <Swiper
+              pagination={{
+                dynamicBullets: true,
+              }}
+              modules={[Pagination]}
+              className="mySwiper"
+            >
+              <SwiperSlide>
+                <Row>
+                  {bestSellingProducts.map((product) => (
+                    <Col md={3} key={product.id} className="mb-4">
+                      <Card className="product-card">
+                        <div className="product-image">
+                          <img src={product.image} alt={product.title} />
+                          <span className="discount-badge">
+                            {product.discount}
+                          </span>
+                          <i className="bi bi-heart home-products-card-fav-icon"></i>
+                          <div className="pre-product-icons">
+                            <div className="product-icons">
+                              <i className="bi bi-infinity"></i>
+                              <Button variant="light" className="add-to-cart">
+                                Add To Cart
+                              </Button>
+                              <FaEye className="homeproduct-icon" />
+                            </div>
+                          </div>
+                        </div>
+                        <Card.Body>
+                          <Card.Title className="product-title">
+                            {product.title}
+                          </Card.Title>
+                          <div className="product-price">
+                            <span className="new-price">{product.price}</span>
+                            <span className="old-price">
+                              {product.oldPrice}
+                            </span>
+                          </div>
+                          <div className="product-rating">
+                            <FaStar className="product-rating-icon" />
+                            <span>({product.rating})</span>
+                          </div>
+                        </Card.Body>
+                      </Card>
+                    </Col>
+                  ))}
+                </Row>
+              </SwiperSlide>
+              <SwiperSlide>
+                <Row>
+                  {bestSellingProducts.map((product) => (
+                    <Col md={3} key={product.id} className="mb-4">
+                      <Card className="product-card">
+                        <div className="product-image">
+                          <img src={product.image} alt={product.title} />
+                          <span className="discount-badge">
+                            {product.discount}
+                          </span>
+                          <i className="bi bi-heart home-products-card-fav-icon"></i>
+                          <div className="pre-product-icons">
+                            <div className="product-icons">
+                              <i className="bi bi-infinity"></i>
+                              <Button variant="light" className="add-to-cart">
+                                Add To Cart
+                              </Button>
+                              <FaEye className="homeproduct-icon" />
+                            </div>
+                          </div>
+                        </div>
+                        <Card.Body>
+                          <Card.Title className="product-title">
+                            {product.title}
+                          </Card.Title>
+                          <div className="product-price">
+                            <span className="new-price">{product.price}</span>
+                            <span className="old-price">
+                              {product.oldPrice}
+                            </span>
+                          </div>
+                          <div className="product-rating">
+                            <FaStar className="product-rating-icon" />
+                            <span>({product.rating})</span>
+                          </div>
+                        </Card.Body>
+                      </Card>
+                    </Col>
+                  ))}
+                </Row>
+              </SwiperSlide>
+              <SwiperSlide>
+                <Row>
+                  {bestSellingProducts.map((product) => (
+                    <Col md={3} key={product.id} className="mb-4">
+                      <Card className="product-card">
+                        <div className="product-image">
+                          <img src={product.image} alt={product.title} />
+                          <span className="discount-badge">
+                            {product.discount}
+                          </span>
+                          <i className="bi bi-heart home-products-card-fav-icon"></i>
+                          <div className="pre-product-icons">
+                            <div className="product-icons">
+                              <i className="bi bi-infinity"></i>
+                              <Button variant="light" className="add-to-cart">
+                                Add To Cart
+                              </Button>
+                              <FaEye className="homeproduct-icon" />
+                            </div>
+                          </div>
+                        </div>
+                        <Card.Body>
+                          <Card.Title className="product-title">
+                            {product.title}
+                          </Card.Title>
+                          <div className="product-price">
+                            <span className="new-price">{product.price}</span>
+                            <span className="old-price">
+                              {product.oldPrice}
+                            </span>
+                          </div>
+                          <div className="product-rating">
+                            <FaStar className="product-rating-icon" />
+                            <span>({product.rating})</span>
+                          </div>
+                        </Card.Body>
+                      </Card>
+                    </Col>
+                  ))}
+                </Row>
+              </SwiperSlide>
+            </Swiper>
+          </div>
+        </Container>
+      </div>
       <Footer />
     </>
   );
