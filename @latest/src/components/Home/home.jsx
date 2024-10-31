@@ -41,6 +41,14 @@ import prdctpic2 from "../../assets/productcardpicture2.jpg";
 import prdctpic3 from "../../assets/productcardpicture3.jpg";
 import prdctpic4 from "../../assets/productcardpicture4.jpg";
 
+import badgepic from "../../assets/badgepic.png";
+import cartpic from "../../assets/cartpic.png";
+import moneybagpic from "../../assets/moneybagpic.png";
+import onlinesupportpic from "../../assets/onlinesupprtpic.png";
+
+import latestpostpic1 from "../../assets/latestpostpic1.jpg";
+import latestpostpic2 from "../../assets/latestpostpic2.jpg";
+
 import HomeProducts from "./homeProducts/homeProducts";
 import Footer from "../customersection/footer/footer";
 import { FaEye, FaStar } from "react-icons/fa";
@@ -489,6 +497,136 @@ const Home = () => {
           </div>
         </Container>
       </div>
+      <div className="manage-quality-div container p-5">
+        <div className="col-12 text-white d-flex align-items-center justify-content=center me-5">
+          <div className="col-3 d-flex text-nowrap align-items-center">
+            <div className="col-6">
+              <img
+                src={badgepic}
+                width={60}
+                height={60}
+                alt=""
+                className="d-flex ms-auto"
+              />
+            </div>
+            <div className="col-6" style={{ fontSize: "15px" }}>
+              <p className="mb-0">
+                <span className="fw-semibold">Manage Quality</span> <br />
+                Best Quality Guarantee
+              </p>
+            </div>
+          </div>
+          <div className="col-3 d-flex text-nowrap align-items-center">
+            <div className="col-6">
+              <img
+                src={cartpic}
+                width={60}
+                height={60}
+                alt=""
+                className="d-flex ms-auto"
+              />
+            </div>
+            <div className="col-6" style={{ fontSize: "15px" }}>
+              <p className="mb-0 ms-2">
+                <span className="fw-semibold">Win $100 To Shop</span> <br />
+                Enter Now
+              </p>
+            </div>
+          </div>
+          <div className="col-3 d-flex text-nowrap align-items-center">
+            <div className="col-6">
+              <img
+                src={onlinesupportpic}
+                width={60}
+                height={60}
+                alt=""
+                className="d-flex ms-auto"
+              />
+            </div>
+            <div className="col-6" style={{ fontSize: "15px" }}>
+              <p className="mb-0 ms-2">
+                <span className="fw-semibold">Best Online Support</span> <br />
+                Hour: 10:00AM - 5:00PM
+              </p>
+            </div>
+          </div>
+          <div className="col-3 d-flex text-nowrap align-items-center">
+            <div className="col-6">
+              <img
+                src={moneybagpic}
+                width={60}
+                height={60}
+                alt=""
+                className="d-flex ms-auto"
+              />
+            </div>
+            <div className="col-6" style={{ fontSize: "15px" }}>
+              <p className="mb-0 ms-2">
+                <span className="fw-semibold">Money Gurantee</span> <br />
+                With A 30 Days
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <Container className="my-5">
+        <h2 className="text-center fw-bold">Latest Post</h2>
+        <p className="text-center w-75 m-auto">
+          Cillum eu id enim aliquip aute ullamco anim. Culpa deserunt nostrud
+          excepteur voluptate velit ipsum esse enim. Lorem ipsum dolor sit amet
+          consectetur adipisicing elit. Corporis, dignissimos!
+        </p>
+
+        {/* Second row with article cards */}
+        <Row className="mt-5">
+          <Col md={6} className="mb-4">
+            <Card className="border-0">
+              <Card.Img
+                src={latestpostpic1}
+                alt="Post 3"
+                className="img-fluid rounded-0"
+              />
+              <Card.Body>
+                <h1 className="fw-bold">
+                  Fashion on a Budget: How to Look Chic Without Breaking the
+                  
+                </h1>
+                <Card.Text className="text-muted">02 JAN, 2019</Card.Text>
+                <Card.Text>
+                  Looking chic and stylish doesn&apos;t have to come with a
+                  hefty price tag. With the right strategies, you can build a
+                  fashionable wardrobe that reflects your style.
+                </Card.Text>
+                <p className="fw-bold">-READ MORE</p>
+              </Card.Body>
+            </Card>
+          </Col>
+          <Col md={6} className="mb-4">
+            <Card className="border-0">
+              <Card.Img
+                src={latestpostpic2}
+                alt="Post 4"
+                className="rounded-0"
+                height={635}
+              />
+              <Card.Body>
+                <h1 className="fw-bold">
+                  10 Must-Have Fashion Staples for Every Woman&apos;s Wardrobe
+                </h1>
+                <Card.Text className="text-muted">02 JAN, 2019</Card.Text>
+                <Card.Text>
+                  In the ever-evolving world of fashion, trends may come and go,
+                  but some pieces remain timeless. These wardrobe essentials are
+                  the foundation of any style.
+                </Card.Text>
+
+                <p className="fw-bold">-READ MORE</p>
+              </Card.Body>
+            </Card>
+          </Col>
+        </Row>
+      </Container>
+
       <Footer />
     </>
   );

@@ -164,6 +164,17 @@
   background-color: #f6f6f6;
 }
 
+.manage-quality-div {
+  background-color: #1f0300;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 150px;
+}
+
+/* Latest Post */
+
+
 /* Responsive Styles */
 @media (max-width: 768px) {
   /* Adjust slider text position for smaller screens */
