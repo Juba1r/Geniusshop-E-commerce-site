@@ -159,7 +159,7 @@ const Home = () => {
         </div>
       </div>
       <div>
-        <Container className="py-5 px-0 mt-5 mb-5">
+        <Container className=" px-0 mt-5">
           <div className="home-category-div justify-content-center d-flex align-items-center gap-4">
             {categories.map((category, index) => (
               <Col
@@ -214,8 +214,9 @@ const Home = () => {
         </div>
       </div>
       <HomeProducts />
-      <div className="deal-of-the-day-div container mt-5 col-12 d-flex">
-        <div className="col-6 deal-of-the-day-text">
+      <div className="deal-of-the-day-div container mt-5 col-12 d-flex flex-column flex-md-row">
+        {/* Text Section */}
+        <div className="col-12 col-md-6 deal-of-the-day-text text-start text-md-start mb-4 mb-md-0">
           <h1 className="fw-bold">
             DEAL <br />
             OF THE DAY
@@ -224,23 +225,19 @@ const Home = () => {
           <p>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab eius
             omnis iste deleniti unde corrupti molestias quis ipsum autem
-            repudiandae!Lorem Lorem ipsum dolor sit amet consectetur
+            repudiandae!Lorem Lorem ipsum dolor sit amet consectetur.
           </p>
-          <div className="d-flex align-items-center gap-4 deal-of-the-day-dates">
+          <div className="d-flex justify-content-center justify-content-md-start align-items-center gap-4 deal-of-the-day-dates">
             <p>
-              {" "}
               236 <br /> DAY
             </p>
             <p>
-              {" "}
               17 <br /> HOUR
             </p>
             <p>
-              {" "}
               59 <br /> MIN
             </p>
             <p>
-              {" "}
               40 <br /> SEC
             </p>
           </div>
@@ -248,24 +245,26 @@ const Home = () => {
             Shop Now
           </button>
         </div>
-        <div className="col-6 align-items-center d-flex justify-content-center ">
+
+        {/* Swiper Section */}
+        <div className="col-12 col-md-6 d-flex justify-content-center">
           <Swiper
             effect={"cards"}
             grabCursor={true}
             modules={[EffectCards]}
-            className="mySwiper h-75 w-50 rounded-5"
+            className="mySwiper w-100 w-md-50 h-50 h-md-75 rounded-5"
           >
             <SwiperSlide>
-              <img src={bstdealsliderimg1} alt="" />
+              <img src={bstdealsliderimg1} alt="Deal Slide 1" />
             </SwiperSlide>
             <SwiperSlide>
-              <img src={bstdealsliderimg2} alt="" />
+              <img src={bstdealsliderimg2} alt="Deal Slide 2" />
             </SwiperSlide>
             <SwiperSlide>
-              <img src={bstdealsliderimg3} alt="" />
+              <img src={bstdealsliderimg4} alt="Deal Slide 3" />
             </SwiperSlide>
             <SwiperSlide>
-              <img src={bstdealsliderimg4} alt="" />
+              <img src={bstdealsliderimg4} alt="Deal Slide 4" />
             </SwiperSlide>
           </Swiper>
         </div>
@@ -498,8 +497,8 @@ const Home = () => {
         </Container>
       </div>
       <div className="manage-quality-div container p-5">
-        <div className="col-12 text-white d-flex align-items-center justify-content=center me-5">
-          <div className="col-3 d-flex text-nowrap align-items-center">
+        <div className="manage-quality-div-fst col-12 text-white d-flex align-items-center justify-content=center me-5">
+          <div className=" manage-quality-div-inner col-3 d-flex text-nowrap align-items-center">
             <div className="col-6">
               <img
                 src={badgepic}
@@ -589,7 +588,6 @@ const Home = () => {
               <Card.Body>
                 <h1 className="fw-bold">
                   Fashion on a Budget: How to Look Chic Without Breaking the
-                  
                 </h1>
                 <Card.Text className="text-muted">02 JAN, 2019</Card.Text>
                 <Card.Text>

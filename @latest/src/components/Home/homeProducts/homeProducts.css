@@ -130,4 +130,8 @@
     font-size: 13px;
     
   }
+  .featured-products h1{
+    margin-top: 0 !important;
+    
+  }
 }

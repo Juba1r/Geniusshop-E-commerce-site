@@ -141,21 +141,25 @@
 .our-partner-div {
   display: grid;
   justify-content: center;
+  padding: 0 15px;
 }
+
 .our-partner-title {
   text-align: center;
   width: 75%;
   margin: auto;
 }
+
 .our-partner-images {
   display: flex;
   justify-content: center;
   gap: 20px;
+  flex-wrap: nowrap;
 }
+
 .our-partner-images img {
-  display: flex;
-  justify-content: center;
   border: 1px solid #8e8a8a65;
+  margin-bottom: 10px;
 }
 
 /* Best Selling Products */
@@ -163,6 +167,8 @@
 .best-selling-product-container {
   background-color: #f6f6f6;
 }
+
+/* manage quality */
 
 .manage-quality-div {
   background-color: #1f0300;
@@ -172,8 +178,19 @@
   height: 150px;
 }
 
-/* Latest Post */
+.manage-quality-div-fst-col {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
 
+.manage-quality-div-inner-col {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Latest Post */
 
 /* Responsive Styles */
 @media (max-width: 768px) {
@@ -218,6 +235,34 @@
     width: 100%;
     margin-bottom: 15px;
   }
+  .our-partner-title {
+    width: 90%;
+  }
+
+  .our-partner-images img {
+    width: 150px;
+    height: auto;
+    
+  }
+
+  .manage-quality-div-fst {
+    gap: 15px;
+  }
+
+  .manage-quality-div-inner {
+    flex: 1 1 45%;
+    max-width: 45%;
+    justify-content: flex-start;
+  }
+
+  .manage-quality-div .col-6 img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .manage-quality-div p {
+    font-size: 13px;
+  }
 }
 
 @media (max-width: 576px) {
@@ -259,6 +304,10 @@
     font-size: 0.8rem;
   }
   /* Best offer image */
+  .best-offer-image-div {
+    gap: 0 !important;
+    margin-top: 0 !important;
+  }
 
   .best-offer-image-div img {
     width: 100%;
@@ -277,5 +326,69 @@
   .container .d-flex.mt-5 .col-6 {
     width: 100%;
     margin-bottom: 15px;
+  }
+
+  .home-products-container {
+    margin-top: 0 !important;
+  }
+
+  .home-products-container h1 {
+    margin-top: 0 !important;
+  }
+
+  /* deal of the day */
+  .deal-of-the-day-text {
+    padding: 20px;
+    display: flex;
+    justify-content: start;
+  }
+  .deal-of-the-day-dates p {
+    font-size: 0.85rem;
+  }
+
+  .mySwiper {
+    width: 100%;
+    height: auto;
+  }
+  .our-partner-title {
+    width: 100%;
+  }
+
+  .our-partner-images {
+    gap: 50px;
+    flex-wrap: wrap;
+  }
+
+  .our-partner-images img {
+    width: 130px;
+    height: auto;
+  }
+  .manage-quality-div {
+    height: auto;
+    width: 100%;
+  }
+
+  .manage-quality-div-fst {
+    flex-direction: column;
+    align-items: center;
+    display: flex !important;
+    justify-content: start !important;
+    gap: 40px;
+  }
+
+  .manage-quality-div-inner {
+    flex: 1 1 100%;
+    max-width: 100%;
+    justify-content: start !important;
+  }
+
+  .manage-quality-div .col-6 img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .manage-quality-div p {
+    font-size: 12px;
+    text-align: center;
   }
 }

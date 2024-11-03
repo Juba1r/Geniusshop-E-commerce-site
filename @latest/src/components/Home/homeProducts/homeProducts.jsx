@@ -213,7 +213,7 @@ const HomeProducts = () => {
           ))}
         </Row>
       </Container>
-      <Container className="py-5">
+      <Container className="py-5 featured-products">
         <h1 className="text-center fw-bold mb-4 mt-5">Our Featured Products</h1>
         <div className="featured-products-swiper mt-5">
           <Swiper
