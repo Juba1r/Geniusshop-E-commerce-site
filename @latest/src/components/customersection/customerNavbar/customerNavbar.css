@@ -41,7 +41,10 @@
 .bottom-navbar .navbar-nav .nav-link {
   color: #000;
 }
-
+.customNavbar-links {
+  text-decoration: none;
+  color: black;
+}
 .navbar-icons {
   font-size: 1.2rem;
   display: flex;
@@ -77,6 +80,13 @@
   justify-content: center;
   align-items: center;
   position: relative;
+}
+.customNavbar-icons-circle:hover {
+  cursor: pointer;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #ff4b3b65;
 }
 
 .customNavbar-links:hover {

@@ -1,6 +1,7 @@
 import { Navbar, Nav, Container, Row, Col, Dropdown } from "react-bootstrap";
 import { FaUser } from "react-icons/fa";
 import "./customerNavbar.css";
+import { Link } from "react-router-dom";
 
 const CustomerNavbar = () => {
   return (
@@ -73,25 +74,25 @@ const CustomerNavbar = () => {
             className="navbar-toggler-left p-0"
           />
           <Navbar.Collapse id="basic-navbar-nav">
-            <Nav className="mx-auto gap-3">
-              <Nav.Link href="#" className="customNavbar-links">
+            <Nav className="mx-auto gap-4">
+              <Link to="/Home" href="#" className="customNavbar-links">
                 HOME
-              </Nav.Link>
-              <Nav.Link href="#" className="customNavbar-links">
+              </Link>
+              <Link to="/CustomerProducts" className="customNavbar-links">
                 PRODUCTS
-              </Nav.Link>
-              <Nav.Link href="#" className="customNavbar-links">
+              </Link>
+              <Link href="#" className="customNavbar-links">
                 PAGES
-              </Nav.Link>
-              <Nav.Link href="#" className="customNavbar-links">
+              </Link>
+              <Link href="#" className="customNavbar-links">
                 BLOG
-              </Nav.Link>
-              <Nav.Link href="#" className="customNavbar-links">
+              </Link>
+              <Link href="#" className="customNavbar-links">
                 FAQ
-              </Nav.Link>
-              <Nav.Link href="#" className="customNavbar-links">
+              </Link>
+              <Link href="#" className="customNavbar-links">
                 CONTACT US
-              </Nav.Link>
+              </Link>
             </Nav>
           </Navbar.Collapse>
 

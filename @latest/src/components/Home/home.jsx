@@ -50,7 +50,6 @@ import latestpostpic1 from "../../assets/latestpostpic1.jpg";
 import latestpostpic2 from "../../assets/latestpostpic2.jpg";
 
 import HomeProducts from "./homeProducts/homeProducts";
-import Footer from "../customersection/footer/footer";
 import { FaEye, FaStar } from "react-icons/fa";
 
 const categories = [
@@ -624,8 +623,6 @@ const Home = () => {
           </Col>
         </Row>
       </Container>
-
-      <Footer />
     </>
   );
 };
