@@ -1,12 +1,30 @@
+import { useState } from "react";
 import "./customerProducts.css";
 import { Container, Row, Col, Card, Button, Form } from "react-bootstrap";
 import productbg from "../../../assets/customerproductbg.jpg";
+import productpic from "../../../assets/productcardpicture1.jpg";
 
 const CustomerProducts = () => {
+  const [expandedCategories, setExpandedCategories] = useState({
+    electronic: true,
+    television: true,
+    refrigerator: false,
+    washingMachine: false,
+    airConditioners: false,
+    fashionBeauty: false,
+  });
+
+  const toggleCategory = (category) => {
+    setExpandedCategories((prevState) => ({
+      ...prevState,
+      [category]: !prevState[category],
+    }));
+  };
+
   return (
     <Container fluid className="p-0">
       <div className="customer-products-div">
-        <div className="customer-products-fst-img ">
+        <div className="customer-products-fst-img">
           <img src={productbg} alt="" height={300} width={1519} />
           <div className="customer-products-text">
             <h2 className="text-white">Product</h2>
@@ -17,34 +35,96 @@ const CustomerProducts = () => {
           <Row>
             {/* Sidebar */}
             <Col lg={3} md={4} sm={12} className="mb-4">
-              <Card className="p-3">
-                <h5 className="mb-3">Product Categories</h5>
-                <ul className="customer-products-page-category-list ">
+              {/* Product Categories Card */}
+              <Card className="p-3 mb-3">
+                <h5 className="mb-3 py-2">Product Categories</h5>
+                <ul className="customer-products-page-category-list">
                   <li>
-                    <strong>Electronic</strong>
+                    <div
+                      className="category-item"
+                      onClick={() => toggleCategory("electronic")}
+                    >
+                      <span>Electronic</span>
+                      <span className="toggle-icon">
+                        {expandedCategories.electronic ? "-" : "+"}
+                      </span>
+                    </div>
+                    {expandedCategories.electronic && (
+                      <ul>
+                        <li
+                          className="category-item text-danger"
+                          onClick={() => toggleCategory("television")}
+                        >
+                          <span>TELEVISION</span>
+                          <span className="toggle-icon">
+                            {expandedCategories.television ? "-" : "+"}
+                          </span>
+                        </li>
+                        {expandedCategories.television && (
+                          <ul>
+                            <li>LCD TV</li>
+                            <li>LED TV</li>
+                            <li>Curved TV</li>
+                            <li>Plasma TV</li>
+                            <li>LED TVs</li>
+                            <li>OLED TVs</li>
+                            <li>Smart TVs</li>
+                            <li>4K & 8K TVs</li>
+                          </ul>
+                        )}
+                      </ul>
+                    )}
                   </li>
-                  <ul>
-                    <li className="text-danger">TELEVISION</li>
-                    <ul>
-                      <li>LCD TV</li>
-                      <li>LED TV</li>
-                      <li>Curved TV</li>
-                      <li>Plasma TV</li>
-                      <li>LED TVs</li>
-                      <li>OLED TVs</li>
-                      <li>Smart TVs</li>
-                      <li>4K & 8K TVs</li>
-                    </ul>
-                  </ul>
-                  <li>Refrigerator</li>
-                  <li>Washing Machine</li>
-                  <li>Air Conditioners</li>
-                  <li>Fashion & Beauty</li>
-                  {/* Add more categories as needed */}
+                  <li>
+                    <div
+                      className="category-item"
+                      onClick={() => toggleCategory("refrigerator")}
+                    >
+                      <span>Refrigerator</span>
+                      <span className="toggle-icon">
+                        {expandedCategories.refrigerator ? "-" : "+"}
+                      </span>
+                    </div>
+                  </li>
+                  <li>
+                    <div
+                      className="category-item"
+                      onClick={() => toggleCategory("washingMachine")}
+                    >
+                      <span>Washing Machine</span>
+                      <span className="toggle-icon">
+                        {expandedCategories.washingMachine ? "-" : "+"}
+                      </span>
+                    </div>
+                  </li>
+                  <li>
+                    <div
+                      className="category-item"
+                      onClick={() => toggleCategory("airConditioners")}
+                    >
+                      <span>Air Conditioners</span>
+                      <span className="toggle-icon">
+                        {expandedCategories.airConditioners ? "-" : "+"}
+                      </span>
+                    </div>
+                  </li>
+                  <li>
+                    <div
+                      className="category-item"
+                      onClick={() => toggleCategory("fashionBeauty")}
+                    >
+                      <span>Fashion & Beauty</span>
+                      <span className="toggle-icon">
+                        {expandedCategories.fashionBeauty ? "-" : "+"}
+                      </span>
+                    </div>
+                  </li>
                 </ul>
+              </Card>
 
-                {/* Price Range */}
-                <h5 className="mt-4">Price Range</h5>
+              {/* Price Range Card */}
+              <Card className="p-3">
+                <h5 className="mb-3">Price Range</h5>
                 <Form.Group controlId="priceRange">
                   <Form.Control type="range" min="0" max="1000000" />
                   <div className="d-flex justify-content-between">
@@ -91,16 +171,17 @@ const CustomerProducts = () => {
               <Card className="customer-products-card p-3 text-center">
                 <Card.Img
                   variant="top"
-                  src="https://via.placeholder.com/150"
+                  src={productpic}
+                  height={150}
                   alt="No Image Found"
                 />
-                <Card.Body>
-                  <Card.Title>Test CSV Product</Card.Title>
+                <Card.Body className="text-start px-1">
+                  <Card.Title>Honda CBR Dual Channel ABS</Card.Title>
                   <Card.Text>
-                    <span className="text-danger">$31 </span>
+                    <span className="fw-semibold">$31 </span>
                     <del>$36.25</del>
-                    <div className="text-warning">
-                      <i className="fas fa-star"></i> 0.0 (0)
+                    <div className="">
+                      <i className="bi bi-star-fill text-warning"></i> 0.0 (0)
                     </div>
                   </Card.Text>
                 </Card.Body>

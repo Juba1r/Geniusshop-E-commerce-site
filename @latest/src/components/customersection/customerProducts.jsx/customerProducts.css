@@ -11,8 +11,8 @@
   left: 50%;
   transform: translate(-50%, -50%);
 }
-
-.customer-products-page {
+.customer-products-page h5 {
+  border-color: #bc9f9fe7;
 }
 
 .customer-products-page-category-list {
@@ -21,19 +21,39 @@
 }
 
 .customer-products-page-category-list > li {
-  font-weight: bold;
-  cursor: pointer;
   margin-bottom: 8px;
+}
+.category-item {
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+  font-weight: bold;
+}
+.toggle-icon {
+  margin-left: auto;
+  font-size: 1.2em;
+  padding-right: 5px;
 }
 
 .customer-products-page-category-list ul {
   list-style-type: none;
   padding-left: 15px;
 }
+.customer-products-page-category-list ul li {
+  cursor: pointer;
+  margin-bottom: 5px;
+}
+
+.customer-products-page-category-list ul li:hover {
+  text-decoration: underline;
+}
 
 .customer-products-card {
   max-width: 200px;
-  margin: auto;
+  margin-right: auto;
+}
+.category-item:hover .toggle-icon {
+  color: #f44e1e;
 }
 /* product sorting section */
 
@@ -70,6 +90,88 @@
   color: #dc3545;
 }
 
+/* price range slider */
+
+
+/* General styling for the range slider */
+#priceRange input[type="range"] {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 6px;
+  background: #ddd;
+  border-radius: 5px;
+  outline: none;
+}
+
+/* Track styling for Chrome and other WebKit browsers */
+#priceRange input[type="range"]::-webkit-slider-runnable-track {
+  background: linear-gradient(to right, orange, orange) no-repeat;
+  height: 6px;
+  border-radius: 5px;
+}
+
+/* Orange track for WebKit browsers based on input value */
+#priceRange input[type="range"]:focus::-webkit-slider-runnable-track {
+  background: linear-gradient(to right, orange var(--value, 0%), #ddd 0%);
+}
+
+/* Thumb styling for WebKit */
+#priceRange input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 16px;
+  height: 16px;
+  background-color: orange;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+/* Track and thumb styling for Firefox */
+#priceRange input[type="range"]::-moz-range-thumb {
+  width: 16px;
+  height: 16px;
+  background-color: orange;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+#priceRange input[type="range"]::-moz-range-track {
+  background: #ddd;
+  height: 6px;
+  border-radius: 5px;
+}
+
+/* Track and thumb styling for IE and Edge */
+#priceRange input[type="range"]::-ms-thumb {
+  width: 16px;
+  height: 16px;
+  background-color: orange;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+#priceRange input[type="range"]::-ms-track {
+  background: #ddd;
+  height: 6px;
+  border-radius: 5px;
+  color: transparent;
+  border-color: transparent;
+}
+
+#priceRange input[type="range"]::-ms-fill-lower {
+  background: orange;
+}
+
+#priceRange input[type="range"]::-ms-fill-upper {
+  background: #ddd;
+}
+
+/* Additional cross-browser styling */
+#priceRange input[type="range"]:hover::-webkit-slider-thumb,
+#priceRange input[type="range"]:hover::-moz-range-thumb,
+#priceRange input[type="range"]:hover::-ms-thumb {
+  background-color: darkorange;
+}
+
 @media (max-width: 768px) {
   .customer-products-page h5 {
     font-size: 1.1rem;
@@ -85,12 +187,23 @@
 }
 
 @media (max-width: 576px) {
+  .customer-products-fst-img img {
+    width: 100%;
+  }
   .customer-products-page .d-flex {
-    flex-direction: column;
+    flex-direction: row;
     align-items: flex-start;
   }
 
   .customer-products-card {
     max-width: 100%;
+  }
+  .product-sorting-section {
+    justify-content: start !important;
+    display: flex !important;
+    flex-direction: column !important;
+    flex-wrap: nowrap !important;
+  }
+  .product-sorting-section h5 {
   }
 }
