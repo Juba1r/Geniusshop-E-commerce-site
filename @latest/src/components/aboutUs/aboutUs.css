@@ -1,0 +1,48 @@
+/* Styles for AboutUs component */
+
+.aboutus-text-div p {
+  font-size: 14px;
+}
+
+@media (max-width: 768px) {
+  .customer-products-fst-img img {
+    width: 100%;
+    height: auto;
+  }
+
+  .aboutus-text-div {
+    padding: 0 15px;
+  }
+
+  .aboutus-text-div h2,
+  .aboutus-text-div h3 {
+    text-align: center;
+  }
+
+  .aboutus-text-div p {
+    font-size: 12px;
+    text-align: justify;
+  }
+}
+
+@media (max-width: 576px) {
+  .customer-products-fst-img img {
+    width: 100%;
+    height: auto;
+  }
+
+  .aboutus-text-div {
+    padding: 0 10px;
+  }
+
+  .aboutus-text-div h2,
+  .aboutus-text-div h3 {
+    font-size: 18px;
+    text-align: left;
+  }
+
+  .aboutus-text-div p {
+    font-size: 10px;
+    text-align: justify;
+  }
+}

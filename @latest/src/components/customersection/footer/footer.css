@@ -37,6 +37,13 @@
 .footer-links li {
   list-style: none;
   margin-bottom: 10px;
+  
+  text-decoration: none;
+}
+
+.footer-links li:hover {
+  color: #ff4c3b;
+  cursor: pointer;
 }
 
 .footer-contact li svg {
