@@ -1,0 +1,71 @@
+/* ContactUs.css */
+
+.contact-info .info-box {
+  background-color: #f8f9fa;
+  border-radius: 8px;
+}
+.info-box-call {
+  background-color: #e6e8ec;
+}
+.info-box-call-2 {
+  background-color: #fff5e8;
+}
+.info-box-fax {
+  background-color: #e9f8f0;
+}
+.info-box-mail {
+  background-color: #e7ecfd;
+}
+
+.contactus-call-icon {
+  background-color: #1f2024;
+  font-size: 24px;
+  padding: 10px;
+  border-radius: 50%;
+}
+.contactus-call-icon-2 {
+  background-color: #ffa11a;
+  font-size: 24px;
+  padding: 10px;
+  border-radius: 50%;
+}
+.contactus-fax-icon {
+  background-color: #27be69;
+  font-size: 24px;
+  padding: 10px;
+  border-radius: 50%;
+}
+.contactus-mail-icon {
+  background-color: #1243ee;
+  font-size: 24px;
+  padding: 10px;
+  border-radius: 50%;
+}
+
+form .form-control {
+  border-radius: 8px;
+}
+
+.form-control-comment {
+  height: 250px;
+}
+
+.btn-primary {
+  background-color: #ff5733;
+  border-color: #ff5733;
+}
+
+.btn-primary:hover {
+  background-color: #ff451e;
+  border-color: #ff451e;
+}
+
+@media (max-width: 576px){
+    .contactus-first-h2{
+        text-align: center;
+    }
+    .contactus-second-h2{
+        margin-top: 25px;
+        text-align: center;
+    }
+}

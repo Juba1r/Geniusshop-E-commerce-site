@@ -54,9 +54,9 @@ const CustomerNavbar = () => {
                 </Dropdown.Menu>
               </Dropdown>
               <div className="p-0">
-                <Nav.Link href="#" className="text-white border-start px-3">
+                <Link to="/UserLogin" className="text-white border-start px-3 text-decoration-none">
                   <FaUser /> My Account
-                </Nav.Link>
+                </Link>
               </div>
             </div>
           </Col>
@@ -90,7 +90,7 @@ const CustomerNavbar = () => {
               <Link href="#" className="customNavbar-links">
                 FAQ
               </Link>
-              <Link href="#" className="customNavbar-links">
+              <Link to="/ContactUs" className="customNavbar-links">
                 CONTACT US
               </Link>
             </Nav>

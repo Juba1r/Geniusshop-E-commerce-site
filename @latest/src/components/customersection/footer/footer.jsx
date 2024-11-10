@@ -88,15 +88,21 @@ const Footer = () => {
                   <li>Blog</li>
                 </Link>
                 <Link to="/Home" className="text-decoration-none text-white">
-                  <li>Faq</li>
+                  <li>FAQ</li>
                 </Link>
                 <Link to="/AboutUs" className="text-decoration-none text-white">
                   <li>About Us</li>
                 </Link>
-                <Link to="/Home" className="text-decoration-none text-white">
+                <Link
+                  to="/PrivacyPolicy"
+                  className="text-decoration-none text-white"
+                >
                   <li>Privacy & Policy</li>
                 </Link>
-                <Link to="/Home" className="text-decoration-none text-white">
+                <Link
+                  to="/TermsAndConditions"
+                  className="text-decoration-none text-white"
+                >
                   <li>Terms & Condition</li>
                 </Link>
                 <Link to="/Home" className="text-decoration-none text-white">

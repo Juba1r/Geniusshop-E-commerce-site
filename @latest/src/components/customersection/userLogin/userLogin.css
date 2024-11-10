@@ -1,0 +1,71 @@
+/* UserLogin.css */
+
+.customer-products-fst-img {
+  position: relative;
+  overflow: hidden;
+}
+
+.customer-products-fst-img img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+.customer-products-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.login-form-wrapper {
+  width: 100%;
+  max-width: 550px;
+  background-color: #b3b7bb2e;
+  padding: 3rem ;
+  border-radius: 8px;
+}
+
+.login-form-wrapper h2 {
+  color: #333;
+}
+.userlogin-email-field{
+    height: 50px;
+}
+.userlogin-password-field{
+    height: 50px;
+}
+.btn-primary {
+  background-color: #ff5733;
+  border-color: #ff5733;
+}
+
+.btn-primary:hover {
+  background-color: #ff451e;
+  border-color: #ff451e;
+}
+
+.btn-outline-secondary {
+  color: #333;
+  
+  border-radius: 8px;
+  height: 50px;
+  font-weight: 500;
+  border: 2px solid #a6abb1;
+}
+
+.btn-outline-secondary:hover {
+  background-color: #ddd;
+  color: #333;
+}
+.btn-outline-secondary img{
+    width: 20px;
+    height: 20px;
+    margin-right: 2px;
+}
+
+.userlogin-login-btn{
+    height: 50px;
+    font-weight: 600;
+}
