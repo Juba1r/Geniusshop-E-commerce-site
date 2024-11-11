@@ -36,14 +36,19 @@
 .userlogin-password-field{
     height: 50px;
 }
-.btn-primary {
+.userlogin-btn-primary {
   background-color: #ff5733;
   border-color: #ff5733;
+  color: white;
+  align-items: center;
+  display: flex;
+  justify-content: center;
 }
 
-.btn-primary:hover {
-  background-color: #ff451e;
+.userlogin-btn-primary:hover {
+  background-color: #ffff;
   border-color: #ff451e;
+  color: #ff451e;
 }
 
 .btn-outline-secondary {

@@ -1,0 +1,114 @@
+.userdashbaord-main-div {
+  background-color: #f6f5f5;
+}
+
+.sidebar {
+  min-height: 100vh;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  border-right: 3px solid #e9ecef;
+}
+
+.sidebar .nav-link {
+  color: #333;
+  padding: 15px 20px;
+  font-size: 16px;
+}
+
+.sidebar .nav-link.active {
+  background-color: #ff5733;
+  color: #fff;
+  border-radius: 8px;
+}
+.nav-link:hover {
+  background-color: #ff5733;
+  color: #fff;
+  border-radius: 8px;
+}
+
+.userdashboard-order-card {
+  border: none;
+  background-color: #eff0ff;
+  border-radius: 8px;
+  height: 250px;
+}
+.userdashboard-pending-card {
+  border: none;
+  background-color: #e9f9f6;
+  border-radius: 8px;
+  height: 250px;
+}
+.userdashboard-bonus-card {
+  border: none;
+  background-color: #fff7eb;
+  border-radius: 8px;
+  height: 250px;
+}
+.userdashboard-wallet-card {
+  border: none;
+  background-color: #e5f9ff;
+  border-radius: 8px;
+  height: 250px;
+}
+
+.table thead th {
+  font-weight: bold;
+}
+
+.table tbody tr:hover {
+  background-color: #f2f2f2;
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    position: absolute;
+    width: 100%;
+    z-index: 1000;
+  }
+}
+
+@media (max-width: 576px) {
+  .userdashboard-main-div .container-fluid {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .sidebar {
+    display: none;
+  }
+  .col-md-3,
+  .col-lg-2 {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+  .recent-orders-table-wrapper {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch; /* for smooth scrolling on mobile */
+  }
+
+  /* Adjust padding and font-size for smaller screens */
+  .recent-orders-table-wrapper table {
+    min-width: 600px; /* Ensures table content doesn't break */
+  }
+
+  .recent-orders-table-wrapper table th,
+  .recent-orders-table-wrapper table td {
+    padding: 0.5rem;
+    font-size: 14px;
+  }
+}
+
+.userdashboard-order-card,
+.userdashboard-pending-card,
+.userdashboard-bonus-card,
+.userdashboard-wallet-card {
+  border: none;
+  border-radius: 8px;
+  height: 250px;
+}
+
+.table thead th {
+  font-weight: bold;
+}
+
+.table tbody tr:hover {
+  background-color: #f2f2f2;
+}

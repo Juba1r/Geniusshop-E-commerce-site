@@ -2,6 +2,7 @@ import "./userLogin.css";
 import productbg from "../../../assets/customerproductbg.jpg";
 import googleicon from "../../../assets/google.png";
 import facebookicon from "../../../assets/facebook.png";
+import { Link } from "react-router-dom";
 
 const UserLogin = () => {
   return (
@@ -63,12 +64,13 @@ const UserLogin = () => {
             </div>
 
             {/* Login Button */}
-            <button
+            <Link
+            to="/UserDashboard"
               type="submit"
-              className="userlogin-login-btn btn btn-primary w-100 mb-3 mt-3"
+              className="userlogin-login-btn btn userlogin-btn-primary w-100 mb-3 mt-3"
             >
               Login
-            </button>
+            </Link>
 
             {/* Divider */}
             <div className="text-center text-muted my-2">Or</div>

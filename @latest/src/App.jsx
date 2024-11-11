@@ -8,7 +8,9 @@ import AboutUs from "./components/aboutUs/aboutUs";
 import PrivacyPolicy from "./components/privacyPolicy/privacyPolicy";
 import TermsAndConditions from "./components/termsAndConditions/termsAndConditions";
 import ContactUs from "./components/contactUs/contactUs";
-import UserLogin from "./components/customersection/userLogin/userLogin";
+import UserLogin from "./components/usersection/userLogin/userLogin";
+import UserDashboard from "./components/usersection/userDashboard/userDashboard";
+import UserLayout from "./components/userLayout";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -41,6 +43,16 @@ const router = createBrowserRouter([
       {
         path: "/UserLogin",
         element: <UserLogin />,
+      },
+    ],
+  },
+  {
+    path: "/",
+    element: <UserLayout />,
+    children: [
+      {
+        path: "/UserDashboard",
+        element: <UserDashboard />,
       },
     ],
   },

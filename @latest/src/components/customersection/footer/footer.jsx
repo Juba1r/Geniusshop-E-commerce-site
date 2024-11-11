@@ -105,7 +105,10 @@ const Footer = () => {
                 >
                   <li>Terms & Condition</li>
                 </Link>
-                <Link to="/Home" className="text-decoration-none text-white">
+                <Link
+                  to="/ContactUs"
+                  className="text-decoration-none text-white"
+                >
                   <li>Contact Us</li>
                 </Link>
               </ul>

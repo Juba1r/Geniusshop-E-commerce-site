@@ -1,0 +1,57 @@
+/* Sidebar overlay (only show on mobile) */
+.usernavbar-sidebar-overlay {
+  display: none;
+}
+
+.usernavbar-sidebar-overlay.open {
+  display: flex;
+  opacity: 1;
+  
+
+}
+
+/* Sidebar */
+.usernavbar-sidebar {
+  width: 220px;
+  height: 100%;
+  background-color: #ffffff;
+  overflow-y: auto;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease-in-out;
+  position: relative;
+  color: black;
+}
+
+
+.usernavbar-sidebar.open {
+  transform: translateX(0);
+}
+
+/* Close Icon */
+.sidebar-close-icon {
+  position: absolute;
+  right: 10px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.nav-link span {
+  color: black;
+}
+.nav-link i {
+  color: black;
+}
+
+/* Media query for larger screens */
+@media (min-width: 992px) {
+  /* Hide sidebar overlay and toggle button on desktop view */
+  .usernavbar-sidebar-overlay,
+  .navbar-toggler-left {
+    display: none !important;
+  }
+
+  /* Reset the sidebar position to be hidden on desktop */
+  .usernavbar-sidebar {
+    transform: translateX(-100%) !important;
+  }
+}
